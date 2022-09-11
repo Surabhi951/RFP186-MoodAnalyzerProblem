@@ -14,14 +14,15 @@ public class MoodAnalyserTest {
 
     @Test
     public void shouldReturnSadMood(){
-        String result =  moodAnalyser.analyseMood("I am in Sad Mood");
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
+        String result =  moodAnalyser.analyseMood();
         Assertions.assertSame("SAD",result);
-
     }
 
     @Test
     public void shouldReturnHappyMood(){
-        String result =  moodAnalyser.analyseMood("I am in Happy Mood");
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in any Mood");
+        String result =  moodAnalyser.analyseMood();
         Assertions.assertSame("HAPPY",result);
     }
 
